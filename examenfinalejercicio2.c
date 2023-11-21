@@ -52,8 +52,8 @@ void quicksort(int lista[], int primero, int ultimo) {
     }
 }
 
-void inserctionsort(int lista[], int n);
-void inserctionsort(int lista[], int n) {
+void insertionsort(int lista[], int n);
+void insertionsort(int lista[], int n) {
     int i;
     for (i = 1; i < n; i++) {
         int numeroActual = lista[i];
@@ -109,7 +109,7 @@ int main() {
         tiempoPromedioQuicksort += tiempoQuicksort[j];
 
         tic = clock();
-        inserctionsort(listaInsertionsort, n);
+        insertionsort(listaInsertionsort, n);
         toc = clock();
         tiempoInsertionsort[j] = ((double)(toc - tic) / CLOCKS_PER_SEC) * 1000.0;
         tiempoMinInsertionsort = fmin(tiempoInsertionsort[j], tiempoMinInsertionsort);
@@ -147,4 +147,3 @@ int main() {
 
     return 0;
 }
-
